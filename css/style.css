@@ -115,7 +115,7 @@ section{
   display: inline-block;
   padding: 0.4rem 0.8rem;
   background: var(--main-color);
-  box-shadow: 0 0 1rem var(--main-color);
+  box-shadow: 0 0 0.5rem var(--main-color);
   font-size: 1.6rem;
   border-radius: 4rem;
   color: var(--second-bg-color);
@@ -138,5 +138,32 @@ section{
 }
 
 .about-img img{
-  width: 25vw;
+  width: 35vw;
+}
+
+.heading{
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.about-content h2{
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3{
+  font-size: 2.6rem;
+  color: var(--main-color);
+}
+
+.about-content p{
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin: 2rem 0 3rem;
+}
+
+.portfolio-img img{
+  width: 35vw;
 }
