@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- ========== HEAD ========== -->
+<!-- Sets up the page title, character encoding, icons, and stylesheet link. -->
 <head>
   <meta charset="UTF-8">
   <meta> http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,52 +16,62 @@
 
 <body>
 
-  <!-- Header section -->
+  <!-- ========== HEADER NAVIGATION ========== -->
+  <!-- Fixed navigation bar used to jump between each page section. -->
   <header class = "header" id = "home">
-    <a href="#" class="logo">Portfolio</a>
+    <a href="#" class="logo">Portfolio.</a>
 
     <i class = 'bx bx-menu' id='menu-icon'></i>
 
     <nav class = "navbar">
-        <a href="#home" class="active">Home</a>
+        <a href="#home" class = active>Home</a>
         <a href="#about">About</a>
         <a href="#portfolio">Portfolio</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Home section Design -->
+  <!-- ========== HOME INTRO ========== -->
+  <!-- Opening section with name, typed intro text, social links, and profile image. -->
   <section class = "home" id = "home">
     <div class = "home-content">
-      <h3>Hello, It's Me </h3>
+      <!-- A Short Introduction -->
+      <h3>Hello, My Name Is </h3>
       <h1>Alvin Paul</h1>
-      <h3>I'm a <span>Junior Developer</span>.</h3>
+      <h3>And I'm a <span class = "multiple-text"></span></h3>
       <p>Feel free to explore my website and check out my projects!</p>
 
+      <!-- Social Links -->
       <div class = "social-media">
-        <a href="N/A - linkedin" target="_blank"><i class='bx bxl-linkedin'></i></a>
-        <a href="N/A - github" target="_blank"><i class='bx bxl-github'></i></a>
-        <a href="N/A - email" target="_blank"><i class='bx bxl-gmail'></i></a>
-        <a href="N/A - instagram" target="_blank"><i class='bx bxl-instagram'></i></a>
+        <a href="https://www.linkedin.com/in/alvinpaul2026/?skipRedirect=true" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://github.com/Alv-P" target="_blank"><i class='bx bxl-github'></i></a>
+        <a href="https://alvinpaulp08@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+        <a href="https://www.instagram.com/alvinp_12/" target="_blank"><i class='bx bxl-instagram'></i></a>
       </div>
 
-      <div class = "btn">
+      <!-- Downloadable CV file will be added later on, but currently is not being used -->
+      <!-- <div class = "btn">
         <a href="#home" class="btn">Download CV</a>
-      </div>
+      </div> -->
     </div>
+    <!-- Profile Image -->
     <div class = "home-img">
       <img src="assets/images/home-img.png" alt="">
     </div>
   </section>
 
-  <!-- About section Design -->
+  <!-- ========== ABOUT ME ========== -->
+  <!-- Short personal description and supporting image. -->
   <section class = "about" id = "about">
+    <!-- Profile Image -->
     <div class = "about-img">
       <img src="assets/images/about-img.png" alt="">
     </div>
+    <!-- Background Information on Who I am -->
     <div class = "about-content"> 
       <h2>About <span>Me</span></h2>
-      <h3>Junior Developer!</h3>
+      <h3><span class = multiple-text-about></span>!</h3>
       <p>Hi! My name is Alvin Paul, 
         and I am a junior developer with a passion for creating 
         innovative and user-friendly applications. I have experience in 
@@ -73,69 +85,127 @@
     </div>
   </section>
 
-  <!-- Portfolio section Design -->
+  <!-- ========== PORTFOLIO PROJECTS ========== -->
+  <!-- Displays project cards with images, descriptions, and GitHub links. -->
   <section class = "portfolio" id = "portfolio">
+    <!-- Portfolio Containing My Latest Projects -->
     <h2 class = "heading">Latest <span>Projects</span></h2>
+
+    <!-- Portfolio container and portfolio box classes are used generally in order to style all of my displays consistently -->
     <div class = "portfolio-container">
+
+      <!-- Dungeon Crawl Project -->
       <div class = "portfolio-box">
         <div class = "portfolio-img">
+          <!-- Image of the project -->
           <img src="assets/images/portfolio1-img.png" alt="">
         </div>
+        <!-- Information and Project Name -->
         <div class = "portfolio-layer">
           <h4>Dungeon Crawl</h4>
           <p>A thrilling reverse dungeon crawler where you play as the enemies normally found in dungeons, fighting your way to the top.</p>
           <a href="https://github.com/Alv-P/Dungeon-Boss" target="_blank"><i class='bx bx-link-external'></i></a>
         </div>
       </div>
+
+      <!-- Chess Club Homepage Project -->
       <div class = "portfolio-box">
         <div class = "portfolio-img">
           <img src="assets/images/portfolio2-img.png" alt="">
         </div>
         <div class = "portfolio-layer">
-          <h4>Project 2</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque.</p>
-          <a href="#" target="_blank"><i class='bx bx-link-external'></i></a>
+          <h4>Chess Club Homepage</h4>
+          <p>A homepage designated for Aldershot Highschool's Chess Club, centralizing any information for a Chess Club memeber or person intersted in Chess Club.</p>
+          <a href="https://github.com/ALDLions-Chess/ald-chess_club" target="_blank"><i class='bx bx-link-external'></i></a>
         </div>
       </div>
+
+      <!-- Vetfinder App Project -->
       <div class = "portfolio-box">
         <div class = "portfolio-img">
           <img src="assets/images/portfolio3-img.png" alt="">
         </div>
         <div class = "portfolio-layer">
-          <h4>Project 3</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque.</p>
-          <a href="#" target="_blank"><i class='bx bx-link-external'></i></a>
+          <h4>Vetfinder</h4>
+          <p>An app designed to provide users fast access to nearby clinics, listing their average wait times, ratings, and specialities.</p>
+          <a href="https://github.com/Alv-P/VetFinder" target="_blank"><i class='bx bx-link-external'></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact section Design -->
+  <!-- ========== SKILLS BAR ========== -->
+  <!-- Shows programming skills using animated percentage bars. -->
+   <section class = "skills" id = "skills">
+
+    <!-- A section showcasing my current skillsets and mastery over specific topics via a percent -->
+    <h2 class = "heading"><span>Skills</span></h2>
+    <div class="skillbars">
+      <p>Java</p>
+      <div class="container">
+        <div class="skill-bar java" data-percent="90">90%</div>
+      </div>
+      <p>Python</p>
+      <div class="container">
+        <div class="skill-bar python" data-percent="80">80%</div>
+      </div>
+
+      <p>Javascript</p>
+      <div class="container">
+        <div class="skill-bar js" data-percent="65">65%</div>
+      </div>
+
+      <p>C#</p>
+      <div class="container">
+        <div class="skill-bar csharp" data-percent="60">60%</div>
+      </div>
+    </div>
+   </section>
+
+  <!-- ========== CONTACT FORM ========== -->
+  <!-- Contact form that sends visitor messages through EmailJS. -->
   <section class = "contact" id = "contact">
+    <!-- A form where visitors of my portfolio site can contact me (it sends me an email) -->
     <h2 class = "heading">Contact <span>Me</span></h2>
-    <form action="#">
+    <form id="contact-form">
       <div class = "input-box">
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="Email Address">
+        <input type="text" id="full-name" name="full_name" placeholder="Full Name" autocomplete="name" required>
+        <input type="email" id="email-address" name="email_address" placeholder="Email Address" autocomplete="email" required>
       </div>
       <div class = "input-box">
-        <input type="number" placeholder="Mobile Number">
-        <input type="text" placeholder="Email Subject">
+        <input type="tel" id="mobile-number" name="mobile_number" placeholder="Mobile Number" autocomplete="tel">
+        <input type="text" id="email-subject" name="email_subject" placeholder="Email Subject" required>
       </div>
-      <textarea name="" id = "" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+      <p id="contact-status" aria-live="polite"></p>
       <input type="submit" value="Send Message" class="btn">
     </form>
   </section>
 
-  <!-- Footer Design -->
+  <!-- ========== FOOTER ========== -->
+  <!-- Bottom area with copyright text and a button back to the top. -->
   <footer class = "footer">
     <div class = "footer-text">
       <p>Copyright &copy; 2026 Alvin Paul | All Rights Reserved.</p>
     </div>
-    <div class = "footer-iconTop"></div>
-      <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    <div class = "footer-iconTop">
+      <a href="#"><i class='bx bxs-up-arrow-square'></i></a>
     </div>
   </footer>
-  <script src = "js/script.js"></script>
+
+  <!-- ========== EXTERNAL SCRIPTS ========== -->
+  <!-- Loads animation, typing, email, and custom JavaScript files. -->
+
+  <!-- scroll reveal -->
+  <script src = "https://unpkg.com/scrollreveal"></script>
+
+  <!-- Typed Js -->
+  <script src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  
+  <!-- Email Js -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- Link to Custom JS file -->
+  <script src = "js/main.js"></script>
 </body>
 </html>

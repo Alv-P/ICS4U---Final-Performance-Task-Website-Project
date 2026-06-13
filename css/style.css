@@ -1,3 +1,5 @@
+/* ========== FONT & RESET ========== */
+/* Imports the font and removes default browser spacing/styles. */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 * {
   margin: 0;
@@ -10,13 +12,18 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* ========== COLOR VARIABLES ========== */
+/* Stores reusable colors so the site's theme is easy to change. */
 :root{
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
+  --darkening: rgba(0,0,0,0.2);
 }
 
+/* ========== GLOBAL STYLES ========== */
+/* Sets base page sizing, background, text color, and section spacing. */
 html{
   font-size: 62.5%;
   overflow-x: hidden;
@@ -25,7 +32,10 @@ html{
 body{
   background: var(--bg-color);
   color: var(--text-color);
+}
 
+span{
+  color: var(--main-color);
 }
 
 section{
@@ -33,6 +43,8 @@ section{
   padding: 100px 9%;
 }
 
+/* ========== HEADER ========== */
+/* Styles the fixed navigation bar and mobile menu icon. */
 .header{
   position: fixed;
   top: 0;
@@ -44,6 +56,10 @@ section{
   justify-content:  space-between;
   align-items: center;
   z-index: 400;
+}
+
+.header.sticky{
+  border-bottom: 0.1rem solid var(--darkening);
 }
 
 .logo{
@@ -72,6 +88,8 @@ section{
   display: none;
 }
 
+/* ========== HOME SECTION ========== */
+/* Lays out the intro text, social links, and floating profile image. */
 .home{
   display: flex;
   align-items: center;
@@ -79,7 +97,20 @@ section{
 }
 
 .home-img img{
-  width: 35vw;
+  width: 50vw;
+  animation: floatImage 4s ease-in-out infinite
+}
+
+@keyframes floatImage{
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .home-content h3{
@@ -111,6 +142,8 @@ section{
   color: var(--main-color);
 }
 
+/* ========== BUTTON ========== */
+/* Reusable button style used for calls to action and form submission. */
 .btn{
   display: inline-block;
   padding: 0.4rem 0.8rem;
@@ -129,6 +162,8 @@ section{
   color: var(--text-color);
 }
 
+/* ========== ABOUT SECTION ========== */
+/* Positions the about image and text side by side on larger screens. */
 .about{
   display: flex;
   align-items: center;
@@ -164,6 +199,8 @@ section{
   margin: 2rem 0 3rem;
 }
 
+/* ========== PORTFOLIO SECTION ========== */
+/* Creates the project grid and hover overlay for each portfolio item. */
 .portfolio{
   background: var(--second-bg-color);
 }
@@ -218,21 +255,21 @@ section{
 }
 
 .portfolio-layer h4{
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--text-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: min(0.5rem, 1.5rem);
 }
 
 .portfolio-layer h3{
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: var(--text-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: min(0.1rem, 0.5rem);
 }
 
 .portfolio-layer p{
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: var(--text-color);
-  margin: 0.3rem 0 1rem;
+  margin: min(0.1rem, 0.3rem) 0 min(0.5rem, 1rem);
 }
 
 .portfolio-layer a{
@@ -245,6 +282,8 @@ section{
   border-radius: 50%;
 }
 
+/* ========== CONTACT SECTION ========== */
+/* Styles the contact form fields, textarea, status message, and submit button. */
 .contact h2{
   margin-bottom: 4rem;
 }
@@ -282,10 +321,19 @@ section{
   resize: none;
 }
 
+#contact-status{
+  min-height: 2.4rem;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
 .contact form .btn{
   margin-top: 2rem;
   cursor: pointer;
 }
+
+/* ========== FOOTER ========== */
+/* Styles the copyright area and the button that scrolls back to the top. */
 
 .footer {
   display: flex;
@@ -314,3 +362,205 @@ section{
   font-size: 2.4rem;
   color: var(--second-bg-color);
 }
+
+.footer-iconTop a:hover{
+  box-shadow: 0 0 0.5rem var(--main-color);
+}
+
+/* ========== BREAKPOINTS ========== */
+/* Adjusts layout and font sizes for tablets and phones. */
+@media (max-width: 1200px){
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 1000px){
+  .header{
+    padding: 2rem 3%;
+  }
+
+  .section{
+    padding: 10rem 3% 2rem;
+  }
+
+  .services{
+    padding-bottom: 6rem;
+  }
+
+  .portfolio{
+    padding-bottom: 6rem;
+  }
+
+  .contact{
+    min-height: auto;
+  }
+
+  .footer{
+    padding: 2rem 3%;
+  }
+}
+
+@media (max-width: 750px){
+  #menu-icon{
+    display: block;
+  }
+
+  .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: 0.1rem solid var(--darkening);
+    box-shadow: 0 .5rem 1rem var(--darkening);
+    display: none;
+  }
+
+  .navbar a{
+    display: block;
+    margin: 3rem 0;
+    font-size: 2rem;
+  }
+
+  .navbar.active{
+    display: block;
+  }
+
+  .home{
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .home-content h3{
+    font-size: 2.5rem;
+  }
+
+  .home-content h1{
+    font-size: 5rem;
+  }
+
+  .home-img img{
+    width: 80vw;
+    margin-top: 4rem;
+  }
+
+  .about{
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .about img{
+    width: 60vw;
+    margin-top: 4rem;
+  }
+
+  .about-content h2{
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .about-content h3{
+    font-size: 2rem;
+  }
+
+  .about-content p{
+    font-size: 1.6rem;
+  }
+
+  .services h2{
+    margin-bottom: 3rem;
+  }
+
+  .portfolio h2{
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px){
+  .portfolio-container{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px){
+  html{
+    font-size: 50%;
+  }
+
+  .contact form .input-box input{
+    width: 100%;
+  }
+}
+
+@media (max-width: 365px){
+  .home-img{
+    width: 90vw;
+  }
+
+  .about-img img{
+    width: 90vw;
+  }
+
+  .footer{
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+.skills{
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== SKILLS SECTION ========== */
+/* Styles the skill labels, progress bar tracks, and animated bar fills. */
+
+/* Container for skill bars */
+.skillbars{
+  max-width: 80rem;
+  margin: 4rem auto 0;
+}
+
+.skillbars p{
+  font-size: 1.8rem;
+  margin: 1.8rem 0 0.8rem;
+}
+
+.container {
+  width: 100%; /* Full width */
+  background-color: var(--text-color); /* White background */
+  border-radius: 5rem;
+  margin-bottom: 1.6rem;
+  overflow: hidden;
+}
+
+.skill-bar {
+  width: 0;
+  text-align: right; /* Right-align text */
+  padding: 1rem 1.5rem; /* Add padding */
+  border-radius: 4rem;
+  color: var(--bg-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: width 1.5s ease;
+}
+
+.skill-bar.animate{
+  width: var(--skill-percent);
+}
+
+.java {background-color: var(--main-color)} /* Green */
+.python {background-color: var(--second-bg-color); color: var(--text-color)} /* Blue */
+.js {background-color: var(--main-color)} /* Red */
+.csharp {background-color: var(--second-bg-color); color: var(--text-color)} /* Dark Grey */
